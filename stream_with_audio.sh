@@ -21,6 +21,6 @@ amixer --card 1 sset 'Mic',0 0
 
 while true
 do
-    ffmpeg -re -f v4l2 -video_size 720x576 -framerate 30 -i /dev/video0 -f alsa -ac 1 -i hw:1 -vf pad=736:576:8:0 -c:v cedrus264 -c:a libmp3lame -b:a 320k -qp 22 -r 30 -pix_fmt nv12 -f mpegts tcp://$TARGET:2000/
+    ffmpeg -re -f v4l2 -video_size 720x576 -framerate 30 -i /dev/video0 -f alsa -ac 1 -i hw:1 -vf pad=736:576:8:0 -c:v cedrus264 -c:a libmp3lame -b:a 320k -qp 24 -r 30 -pix_fmt nv12 -f mpegts tcp://$TARGET:2000/
     sleep 1.2
 done
