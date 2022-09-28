@@ -1,0 +1,19 @@
+[Unit]
+Description=BPI Video Recorder
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=no
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/bin/bash /root/record_with_audio.sh
+KillSignal=SIGINT
+TimeoutStopSec=10
+FinalKillSignal=SIGKILL
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=70
+
+[Install]
+WantedBy=multi-user.target
