@@ -52,7 +52,7 @@ Cedar H264 encoder:
 3. Compile Cedar:  
 `make LOCALVERSION="-sunxi"`  
 4. Install Cedar:  
-`cp cedar_ve.ko /lib/modules/<version>/  
+`cp cedar_ve.ko /lib/modules/<version>/`  
 `depmod`  
 `echo cedar_ve | tee -a /etc/modules`  
 5. Reboot and check:  
@@ -77,7 +77,7 @@ FFMPEG:
 `make install`  
 `ldconfig`  
 4. Install FFMPEG:  
-`cd ~`
+`cd ~`  
 `git clone --depth=1 https://github.com/stulluk/FFmpeg-Cedrus.git`  
 `git clone https://github.com/uboborov/ffmpeg_h264_H3.git`  
 `cp ffmpeg_h264_H3/cedrus264.c FFmpeg-Cedrus/libavcodec/cedrus264.c`  
