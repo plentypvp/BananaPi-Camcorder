@@ -1,4 +1,5 @@
 Banana Pi Camcorder
+===============
 Using Banana Pi M2 Zero, OV5640 image sensor and Cedrus H264 hardware encoder to record & stream video. 
 
 Preparation:
