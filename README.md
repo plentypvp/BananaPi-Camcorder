@@ -112,5 +112,5 @@ Streaming:
 Update streaming_target.conf accordingly and then:
 `systemctl start bpi-streamer`  
 
-Watching:
+Watching:  
 `./playstream.sh`  
