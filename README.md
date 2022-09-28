@@ -108,8 +108,8 @@ Install services:
 `cp *.service /etc/systemd/system/`  
 `systemctl daemon-reload`  
 
-Streaming:
-Update streaming_target.conf accordingly and then:
+Streaming:  
+Update streaming_target.conf accordingly and then:  
 `systemctl start bpi-streamer`  
 
 Watching:  
