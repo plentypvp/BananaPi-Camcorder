@@ -1,6 +1,8 @@
 Banana Pi Camcorder
 ===============
-Using Banana Pi M2 Zero, OV5640 image sensor and Cedrus H264 hardware encoder to record & stream video. 
+Using Banana Pi M2 Zero, OV5640 image sensor and Cedrus H264 hardware encoder to record & stream video.
+
+![Project hardware](/image.jpg)
 
 Preparation:
 1. Clean Armbian install (Armbian_21.08.1_Bananapim2zero_buster_current_5.10.60), with root permissions.
@@ -105,3 +107,10 @@ Full recording (with USB audio):
 Install services:  
 `cp *.service /etc/systemd/system/`  
 `systemctl daemon-reload`  
+
+Streaming:
+Update streaming_target.conf accordingly and then:
+`systemctl start bpi-streamer`  
+
+Watching:
+`./playstream.sh`  
