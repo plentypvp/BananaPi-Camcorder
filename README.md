@@ -10,7 +10,7 @@ Preparation:
 3. Connect to Wi-Fi:  
 `nmtui`
 3. APT:  
-`apt update
+`apt update`  
 apt upgrade`
 4. Reboot and find out kernel version after apt upgrade:  
 `uname -r`
