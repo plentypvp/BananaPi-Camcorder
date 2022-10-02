@@ -5,6 +5,7 @@ Using Banana Pi M2 Zero, OV5640 image sensor and Cedrus H264 hardware encoder to
 <img src="image.jpg" width="600" height="600" />
 
 Preparation:
+0. Make sure your power supply can output 2A current at 5V, otherwise the system will hang randomly, but 2A peaks are rare and instantaneous.
 1. Clean Armbian install (Armbian_21.08.1_Bananapim2zero_buster_current_5.10.60), with root permissions.
 2. All the following commands should be performed as root.
 3. Connect to Wi-Fi:  
@@ -105,7 +106,10 @@ Full recording (with USB audio):
 `./record_with_audio.sh`  
   
 Install services:  
+`cd /this/repo/`  
 `cp *.service /etc/systemd/system/`  
+`cp *.sh /root/`  
+`cp streaming_target.conf /root/`  
 `systemctl daemon-reload`  
 
 Streaming:  
